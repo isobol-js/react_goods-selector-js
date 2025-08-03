@@ -37,7 +37,7 @@ export const App = () => {
               type="button"
               className="delete ml-3"
               onClick={handleClear}
-            />
+             ></button>
           </>
         ) : (
           'No goods selected'
