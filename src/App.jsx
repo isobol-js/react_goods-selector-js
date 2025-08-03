@@ -18,7 +18,7 @@ export const goods = [
 export const App = () => {
   const [selectedGood, setSelectedGood] = useState('Jam');
 
-  const handleSelect = good => {
+  const handleSelect = (good) => {
     setSelectedGood(good);
   };
 
@@ -46,13 +46,11 @@ export const App = () => {
 
       <table className="table">
         <tbody>
-          {goods.map(good => (
+          {goods.map((good) => (
             <tr
-              data-cy="Good"
               key={good}
-              className={
-                good === selectedGood ? 'has-background-success-light' : ''
-              }
+              data-cy="Good"
+              className={good === selectedGood ? 'has-background-success-light' : ''}
             >
               <td>
                 {good === selectedGood && (
@@ -66,7 +64,7 @@ export const App = () => {
                   </button>
                 )}
 
-                {good !== selectedGood && selectedGood === '' && (
+                {good !== selectedGood && (
                   <button
                     data-cy="AddButton"
                     type="button"
